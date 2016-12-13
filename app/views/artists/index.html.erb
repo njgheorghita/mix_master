@@ -1,0 +1,10 @@
+<h1> artists </h1>
+<%= link_to 'New artist', new_artist_path %>
+<br>
+<% @artists.each do |a| %>
+  <img src="<%= a.artist_image_path%>">
+  <%= link_to a.artist_name, artist_path(a) %>
+  <%= link_to "Edit", edit_artist_path(a) %>
+  <%= link_to "Delete", artist_path(a), :method => :delete %>
+  <br>
+<% end %>
