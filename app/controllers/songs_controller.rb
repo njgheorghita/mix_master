@@ -38,11 +38,15 @@ class SongsController < ApplicationController
   end
 
   def destroy
-    song = Song.find(params[:id])
-    @artist = song.artist
-    song.destroy
-
-    redirect_to artist_path(@artist)
+    if params["artist_id"]
+      @song = Song.find(params[:id])
+      @artist = @song.artist
+      song.destroy
+      redirect_to artist_path(@artist)
+    else
+      Song.delete(params[:id])
+      redirect_to songs_path
+    end
   end
 
   private
