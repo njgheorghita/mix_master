@@ -1,5 +1,9 @@
 class SongsController < ApplicationController
 
+  def index
+    @songs = Song.all
+  end
+
   def new
     @artist = Artist.find(params[:artist_id])
     @song = @artist.songs.new
@@ -7,15 +11,38 @@ class SongsController < ApplicationController
 
   def create
     @artist = Artist.find(params[:artist_id])
-    @artist.songs.create(song_params)
+    new_song = @artist.songs.new(song_params)
 
-    @song = Song.where(:title=>song_params[:title], :artist_id => params[:artist_id]).first
-
-    redirect_to song_path(@song)
+    if new_song.save
+      @song = Song.where(:title=>song_params[:title], :artist_id => params[:artist_id]).first
+      redirect_to song_path(@song)
+    else
+      @errors = "Title cannot be blank"
+      @song = @artist.songs.new 
+      render :new
+    end
   end
 
   def show
     @song = Song.find(params[:id])
+  end
+
+  def edit
+    @song = Song.find(params[:id])
+    @artist = @song.artist
+  end
+
+  def update
+    Song.update(params[:id], song_params)
+    redirect_to song_path()
+  end
+
+  def destroy
+    song = Song.find(params[:id])
+    @artist = song.artist
+    song.destroy
+
+    redirect_to artist_path(@artist)
   end
 
   private
