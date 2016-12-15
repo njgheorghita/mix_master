@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+  before_action :set_artist, only: [:show, :edit]
 
   def index
     @artists = Artist.all
@@ -9,9 +10,11 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    @artist = Artist.find(params[:id])
   end
 
+  def edit
+  end
+  
   def create
     @artist = Artist.new(artist_params)
     if @artist.save
@@ -20,10 +23,6 @@ class ArtistsController < ApplicationController
       @errors = "Name can't be blank'"
       render :new
     end
-  end
-
-  def edit
-    @artist = Artist.find(params[:id])
   end
 
   def update
@@ -37,6 +36,10 @@ class ArtistsController < ApplicationController
   end
   
   private
+
+  def set_artist
+    @artist = Artist.find(params[:id])
+  end
 
   def artist_params
     params.require(:artist).permit(:artist_name, :artist_image_path)

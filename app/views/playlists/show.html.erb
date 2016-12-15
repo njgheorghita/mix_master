@@ -1,4 +1,8 @@
-<%= @playlist.name %>
+<%= "#{@playlist.name}'s top 10 electronic songs of all time" %>
 <% @songs.each do |s| %>
   <li><%= link_to s.title, song_path(s) %></li>
 <% end %>
+<br>
+<%= link_to "Edit Playlist", edit_playlist_path(@playlist) %>
+<br>
+<%= link_to "Delete Playlist", playlist_path(@playlist), :method => :delete %>

@@ -1,6 +1,8 @@
 class PlaylistsController < ApplicationController
   def index
     @playlists = Playlist.all
+    @popular_songs = Playlist.most_popular_song
+    @popular_artists = Playlist.most_popular_artist
   end
 
   def new
@@ -21,9 +23,24 @@ class PlaylistsController < ApplicationController
     end
   end
 
+  def edit
+    @playlist = Playlist.find(params[:id])
+    @songs = Song.all
+  end
+
+  def update
+    Playlist.update(params[:id], playlist_params)
+    redirect_to playlist_path(params[:id])
+  end
+
   def show
     @playlist = Playlist.find(params[:id])
     @songs = Song.find(@playlist.song_ids)
+  end
+
+  def destroy
+    Playlist.delete(params[:id])
+    redirect_to playlists_path
   end
 
   private

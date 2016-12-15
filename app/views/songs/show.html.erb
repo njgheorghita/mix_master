@@ -2,4 +2,11 @@
 <%= @song.title %>
 <h1> by artist </h1>
 <%= link_to @song.artist.artist_name, artist_path(@song.artist) %>
+<br>
+<h1> appears on playlists </h1>
+<% @song.playlists.each do |p| %>
+  <%= link_to p.name, playlist_path(p) %>
+<% end %>
+<br>
 <%= link_to "Edit song", edit_song_path(@song) %>
+<%= link_to 'Delete', song_path(@song), :method => :delete %>

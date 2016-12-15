@@ -1,12 +1,13 @@
 <h1><%= @artist.artist_name %></h1>
 <img src="<%= @artist.artist_image_path%>">
+<br>
 <%= link_to "Edit", edit_artist_path(@artist) %>
 <%= link_to "Delete", artist_path(@artist), :method => :delete %>
 <br>
-<%= link_to "New song", new_artist_song_path(@artist) %>
 <br>
 <br>
 <h2> songs by this artist </h2>
+<%= link_to "New song", new_artist_song_path(@artist) %>
 <!-- ALPHABETIZE !!!! AND FOR FEATURE TEST -->
 <div class="songs">
   <% @artist.songs.each do |s| %>

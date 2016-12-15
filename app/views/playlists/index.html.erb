@@ -1,5 +1,21 @@
-<h1> all playlists </h1>
-<%= link_to "New playlist", new_playlist_path %> 
+<h1> best electronic artist of all time</h1>
+<% @popular_artists.each do |pa| %>
+  <img src="<%= Artist.find(pa[0]).artist_image_path%>">
+  <br>
+  <%= link_to Artist.find(pa[0]).artist_name, artist_path(pa[0]) %>
+  <br>
+  <%= "with #{pa[1]} appearances across all playlists" %>
+  <br>
+<% end %>
+<h1> best electronic song of all time </h1>
+<% @popular_songs.each do |ps| %>
+  <%= link_to ps[0].title, song_path(ps[0]) %>
+  <br>
+  <%= "appears on #{ps[1]} playlists" %>
+  <br>
+<% end %>
+<h1> playlist data sources </h1>
 <% @playlists.each do |p| %>
   <%= link_to p.name, playlist_path(p) %>
+  <br>
 <% end %>

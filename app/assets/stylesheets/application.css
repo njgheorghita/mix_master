@@ -14,7 +14,26 @@
  *= require_self
  */
 
- img {
-   width:200px;
-   border-radius:20px;
- }
+img {
+  width:200px;
+  border-radius:20px;
+}
+
+body {
+  text-align: center;
+  background-image: url("./synth1.png");
+  background-size:cover;
+  color:white;
+  font-family: 'Sigmar One', cursive;
+}
+
+a {
+  color:gray;
+  font-size:1.5em;
+}
+
+.navbar {
+  background: none;
+  border-bottom: 5px solid white;
+  border_radius:none;
+}

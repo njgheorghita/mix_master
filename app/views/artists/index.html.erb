@@ -3,8 +3,7 @@
 <br>
 <% @artists.each do |a| %>
   <img src="<%= a.artist_image_path%>">
+  <br>
   <%= link_to a.artist_name, artist_path(a) %>
-  <%= link_to "Edit", edit_artist_path(a) %>
-  <%= link_to "Delete", artist_path(a), :method => :delete %>
   <br>
 <% end %>
