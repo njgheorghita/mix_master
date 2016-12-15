@@ -21,7 +21,7 @@ img {
 
 body {
   text-align: center;
-  background-image: image_path("../images/synth1.png");
+  background-image: image-url("synth1.png");
   background-size:cover;
   color:white;
   font-family: 'Sigmar One', cursive;
