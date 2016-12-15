@@ -13,7 +13,7 @@ RSpec.feature "User edits a playlist" do
     expect(page).to have_link playlist_name.name
 
     click_on playlist_name.name
-
+    save_and_open_page
     fill_in "playlist_name", with: new_name
     check("song-#{song_three.id}")
     click_on "Update Playlist"
