@@ -1,5 +1,5 @@
 class PlaylistsController < ApplicationController
-  def index
+  def home
     @playlists = Playlist.all
     @popular_songs = Playlist.most_popular_song
     @popular_artists = Playlist.most_popular_artist
@@ -21,6 +21,10 @@ class PlaylistsController < ApplicationController
       @songs = Song.all
       render :new
     end
+  end
+
+  def index
+    @playlists = Playlist.all
   end
 
   def edit

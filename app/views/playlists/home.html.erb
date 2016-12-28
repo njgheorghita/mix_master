@@ -1,0 +1,45 @@
+<h1 style="width:80%; margin-left:auto; margin-right:auto;"> the top electronic sounds of all time </h1>
+<p style="width:80%; margin-left:auto; margin-right:auto;">  - according to top 10 lists aggregated from premier music blogs - </p>
+<br>
+<div> 
+  <div class="col-md-6 dash">
+    <h2> best artist </h2>
+    <br>
+    <% @popular_artists.each do |pa| %>
+      <img style="width:560px; height:315px;" src="<%= Artist.find(pa[0]).artist_image_path%>">
+      <br>
+      <%= link_to Artist.find(pa[0]).artist_name, artist_path(pa[0]) %>
+      <br>
+      <p><%= "with #{pa[1]} appearances across #{@playlists.count} playlists" %></p>
+      <br>
+    <% end %>
+  </div>
+  <div class="col-md-6 dash">
+    <h2> best song </h2>
+    <br>
+    <% @popular_songs.each do |ps| %>
+      <iframe width="560" height="315" src="<%= ps[0].youtube.gsub('watch?v=', 'embed/') %>" frameborder="0" allowfullscreen></iframe>
+      <%= link_to ps[0].title, song_path(ps[0]) %>
+      <br>
+      <p><%= "appears on #{ps[1]} playlists" %></p>
+      <br>
+    <% end %>
+  </div>
+</div> 
+<h1> playlist sources </h1>
+<div>
+  <% @playlists.each do |p| %>
+    <div class="col-md-4">
+      <%= link_to p.name, playlist_path(p) %>
+      <br>
+    </div>
+  <% end %>
+</div>
+<br>
+<br>
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted"> a project by nick gheorghita, using rails, postgres and bootstrap.  </p>
+    <p class="text-muted"> code available <a href="https://github.com/njgheorghita/mix_master" target="_blank">here</a></p>
+  </div>
+</footer>
