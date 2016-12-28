@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+With the infinite amount of electronic music out there, have you ever wondered what's the best?
 
-Things you may want to cover:
+Well . . . I did, so I created this mini-project.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Feel free to create your own Top 10 playlist and add your opinions to this aggregator. 
