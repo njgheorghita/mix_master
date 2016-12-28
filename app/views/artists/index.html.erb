@@ -1,9 +1,13 @@
 <h1> artists </h1>
-<%= link_to 'New artist', new_artist_path %>
 <br>
-<% @artists.each do |a| %>
-  <img src="<%= a.artist_image_path%>">
-  <br>
-  <%= link_to a.artist_name, artist_path(a) %>
-  <br>
-<% end %>
+<div>
+  <% @artists.each do |a| %>
+    <div class="col-md-4">
+      <img src="<%= a.artist_image_path%>">
+      <br>
+      <%= link_to a.artist_name, artist_path(a) %>
+      <br>
+    </div>
+  <% end %>
+</div>
+<%= link_to 'Create an artist', new_artist_path %>

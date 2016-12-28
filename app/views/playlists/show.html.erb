@@ -1,7 +1,9 @@
-<%= "#{@playlist.name}'s top 10 electronic songs of all time" %>
+<h1><%= "#{@playlist.name}'s 10 best electronic songs" %></h1>
 <% @songs.each do |s| %>
   <li><%= link_to s.title, song_path(s) %></li>
 <% end %>
+<br>
+<%= link_to "source", @playlist.source, target: "_blank" %>
 <br>
 <%= link_to "Edit Playlist", edit_playlist_path(@playlist) %>
 <br>

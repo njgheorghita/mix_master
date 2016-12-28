@@ -2,15 +2,16 @@
   <%= @errors %>
 <% end %>
 <%= form_for(@playlist) do |f| %>
-  <%= f.label 'playlist name' %>
-  <%= f.text_field :name %>
+    <%= f.label 'name' %>
+    <%= f.text_field :name %>
 
-  <% @songs.each do |song| %>
-    <div>
-      <%= check_box_tag(:song_ids, song.id, false, :name => 'playlist[song_ids][]', id: "song-#{song.id}") %>
-      <%= song.title %>
-    </div>
-  <% end %>
-
+    <% @songs.each do |song| %>
+      <div class="list_style">
+        <div style="float:left;margin-left:5px;">
+          <%= check_box_tag(:song_ids, song.id, false, :name => 'playlist[song_ids][]', id: "song-#{song.id}") %>
+        </div>
+        <%= song.title %>
+      </div>
+    <% end %>
   <%= f.submit %>
 <% end %>

@@ -1,6 +1,27 @@
 <h1> all songs </h1>
-
-<% @songs.each do |s| %>
-  <%= link_to s.title, song_path(s) %>
-  <br>
-<% end %>
+<table class="table songs_table">
+  <thead>
+    <tr>
+      <th>
+        title 
+      </th>
+      <th>
+        popularity
+        <br>
+        (# of playlists)
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @songs.each do |s| %>
+      <tr>
+        <td>
+          <%= link_to s.title, song_path(s) %> 
+        </td>
+        <td>
+          <%= s.playlists.count %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

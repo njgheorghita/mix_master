@@ -3,6 +3,13 @@ class SongsController < ApplicationController
 
   def index
     @songs = Song.all
+    @popular = Song.joins(:playlists).order("count_all DESC").group(:id).count
+  end
+
+  def random
+    random_number = 1 + Random.rand(Song.all.count - 1)
+    @song = Song.find(random_number)
+    render :show
   end
 
   def new

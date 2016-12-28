@@ -11,8 +11,9 @@
 # last fm - https://www.youtube.com/watch?v=hLgbeJcnvIU
 # http://mixmag.net/read/what-is-the-greatest-dance-track-of-all-time-features
 # https://www.buzzfeed.com/ericbudiantot/101-best-most-popular-and-most-influential-electr-73mt
-
-
+# google search for best electronic songs of all time
+# http://www.complex.com/music/2013/08/the-15-best-songs-from-the-electronica-era/underworld-born-slippy-nuxx
+# https://www.theguardian.com/music/2014/oct/22/annie-mac-top-10-dance-tracks
 
 deadmau5 = Artist.create(artist_name: "Deadmau5", artist_image_path: "http://kingofwallpapers.com/deadmau5/deadmau5-004.jpg")
 first = Song.create(title:"Strobe", artist_id: deadmau5.id)
@@ -24,14 +25,14 @@ zedd = Artist.create(artist_name: "Zedd", artist_image_path: "https://geo-media.
 fourth = Song.create(title:"Spectrum", artist_id: zedd.id)
 martin = Artist.create(artist_name: "Martin Garrix", artist_image_path: "https://geo-media.beatport.com/image/9094633.jpg")
 animals = Song.create(title:"Animals", artist_id: martin.id)
-sixth = Song.create(title:"Around The World", artist_id: daft.id)
+around = Song.create(title:"Around The World", artist_id: daft.id)
 seventh = Song.create(title:"Fade Into Darkness", artist_id: avicii.id)
 skrillex = Artist.create(artist_name: "Skrillex", artist_image_path: "http://runthetrap.com/wp-content/uploads/2015/09/skrillex2-6.26.2015.jpg")
-eighth = Song.create(title:"Scary Monsters and Nice Sprites", artist_id: skrillex.id)
+scary = Song.create(title:"Scary Monsters and Nice Sprites", artist_id: skrillex.id)
 ninth = Song.create(title:"Wake Me Up", artist_id: avicii.id)
 ingrosso = Artist.create(artist_name: "Ingrosso & Alesso", artist_image_path: "http://www.beatmyday.com/wp-content/uploads/2012/08/sebastian-ingrosso-alesso.jpeg")
 tenth = Song.create(title:"Calling (Lose My Mind)", artist_id: ingrosso.id)
-Playlist.create(name:"The Top Tens", song_ids:[first.id, levels.id, harder_better.id, fourth.id, animals.id, sixth.id, seventh.id, eighth.id, ninth.id, tenth.id])
+Playlist.create(name:"The Top Tens", song_ids:[first.id, levels.id, harder_better.id, fourth.id, animals.id, around.id, seventh.id, scary.id, ninth.id, tenth.id])
 
 marshall = Artist.create(artist_name: "Marshall Jefferson", artist_image_path: "http://www.deejaybooking.com/wp-content/uploads/2014/02/marshall_jefferson_google4.jpg")
 first = Song.create(title:"Move Your Body (The House Music Anthem)", artist_id: marshall.id)
@@ -84,26 +85,63 @@ plastik = Artist.create(artist_name: "Plastikman", artist_image_path: "https://f
 fourth = Song.create(title:"Spastik", artist_id: plastik.id)
 # sounds_better
 faithless = Artist.create(artist_name: "Faithless", artist_image_path: "https://i.ytimg.com/vi/ZHVJVQzHv5Q/hqdefault.jpg")
-sixth = Song.create(title:"Insomnia", artist_id: faithless.id)
+insomnia = Song.create(title:"Insomnia", artist_id: faithless.id)
 # born_slippy seventh
 prodigy = Artist.create(artist_name: "The Prodigy", artist_image_path: "http://tbilisijazz.com/wp-content/uploads/2016/04/the-prodigy-4.jpg")
 eighth = Song.create(title:"Smack My Bitch Up", artist_id: prodigy.id)
 tiesto = Artist.create(artist_name: "Tiesto", artist_image_path: "http://exoduslasvegas.com/wp-content/uploads/2016/11/Tiesto-1.jpg")
 adagio = Song.create(title:"Adagio For Strings", artist_id: tiesto.id)
 one_more_time = Song.create(title:"One More Time", artist_id: daft.id)
-Playlist.create(name:"MixMag", song_ids:[first.id, second.id, third.id, fourth.id, sounds_better.id, sixth.id, born_slippy.id, eighth.id, adagio.id, one_more_time.id])
+Playlist.create(name:"MixMag", song_ids:[first.id, second.id, third.id, fourth.id, sounds_better.id, insomnia.id, born_slippy.id, eighth.id, adagio.id, one_more_time.id])
 
-first = Song.create(title:"Get Lucky", artist_id: daft.id)
+get_lucky = Song.create(title:"Get Lucky", artist_id: daft.id)
 # animals marti garrix second
 # levels third
 shm = Artist.create(artist_name: "Swedish House Mafia", artist_image_path: "http://theneptunes.org/wp-content/uploads/2009/10/Swedish-House-Mafia.jpg")
 fourth = Song.create(title:"One", artist_id: shm.id)
 # music sounds better with you 
 # born_slippy sixth
-seventh = Song.create(title:"Praise You", artist_id: fatboy.id)
+praise_you = Song.create(title:"Praise You", artist_id: fatboy.id)
 # adagio eighth
 robin = Artist.create(artist_name: "Robin S.", artist_image_path: "http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/amz/4/2/8/2/5014524102824_500W_500H.jpg")
 ninth = Song.create(title:"Show Me Love", artist_id: robin.id)
 # one more time
-Playlist.create(name:"BuzzFeed", song_ids:[first.id, animals.id, levels.id, fourth.id, sounds_better.id, born_slippy.id, seventh.id, adagio.id, ninth.id, one_more_time.id])
+Playlist.create(name:"BuzzFeed", song_ids:[get_lucky.id, animals.id, levels.id, fourth.id, sounds_better.id, born_slippy.id, praise_you.id, adagio.id, ninth.id, one_more_time.id])
 
+first = Song.create(title:"I remember", artist_id: deadmau5.id)
+chemical = Artist.create(artist_name: "The Chemical Brothers", artist_image_path: "http://jcket.com/stoneyroads/files/2015/07/800x500-centre/the-chemical-bros-blue.jpg")
+block = Song.create(title:"Block Rockin' Beats", artist_id: chemical.id)
+calvin = Artist.create(artist_name: "Calvin Harris", artist_image_path: "https://a4-images.myspacecdn.com/images04/1/2b69174db2ee4fc494f2667ca48f2820/600x600.jpg")
+# scary fourth
+fifth = Song.create(title:"We Found Love ft. Rihanna", artist_id: calvin.id)
+# sixth
+firestarter = Song.create(title:"Firestarter", artist_id: prodigy.id)
+Playlist.create(name:"Google", song_ids:[first.id, block.id, get_lucky.id, scary.id, fifth.id, harder_better.id, firestarter.id, around.id, born_slippy.id, insomnia.id])
+
+goldie = Artist.create(artist_name: "Goldie", artist_image_path: "http://cps-static.rovicorp.com/3/JPG_500/MI0001/342/MI0001342877.jpg?partner=allrovi.com")
+innercity = Song.create(title:"Inner City Life", artist_id: goldie.id)
+moby = Artist.create(artist_name: "Moby", artist_image_path: "http://p.fod4.com/p/channels/legacy/profile/1328180/f52a2695fceff6e43179053f701c5d16.")
+seventh = Song.create(title:"Porcelain", artist_id: moby.id)
+aphex = Artist.create(artist_name: "Aphex Twin", artist_image_path: "http://www.electronicbeats.net/app/uploads/2016/01/MI0000123384.jpg")
+eighth = Song.create(title:"Come To Daddy", artist_id: aphex.id)
+roni = Artist.create(artist_name: "Roni Size / Reprazent", artist_image_path: "https://thumbnailer.mixcloud.com/unsafe/318x318/extaudio/7/e/d/7/868d-bf3a-4c86-b88d-a5b82f229041.jpg")
+ninth = Song.create(title:"Brown Paper Bag", artist_id: roni.id)
+Playlist.create(name:"Complex", song_ids:[around.id, firestarter.id, innercity.id, born_slippy.id, block.id, praise_you.id, seventh.id, eighth.id, ninth.id, insomnia.id])
+
+massive = Artist.create(artist_name: "Massive Attack", artist_image_path: "http://images.popmatters.com/blog_art/t/take_it_there-650.jpg")
+first = Song.create(title:"Unfinished Symphony", artist_id: massive.id)
+portishead = Artist.create(artist_name: "Portishead", artist_image_path: "http://www.alwaysontherun.net/portisheadtop0.jpg")
+second = Song.create(title:"Roads", artist_id: portishead.id)
+leftfield = Artist.create(artist_name: "Leftfield", artist_image_path: "http://img2-ak.lst.fm/i/u/300x300/c90616001a2244bcb2b16a9d916b9f2d.jpg")
+third = Song.create(title:"Space Shanty", artist_id: leftfield.id)
+fifth = Song.create(title:"Burnin", artist_id: daft.id)
+rolando = Artist.create(artist_name: "DJ Rolando", artist_image_path: "https://www.xlr8r.com/wp-content/uploads/files/features/frontpage_images/rolando052311.jpg")
+sixth = Song.create(title:"Knights of the Jaguar", artist_id: rolando.id)
+tribe = Artist.create(artist_name: "A Tribe Called Quest", artist_image_path: "https://nyoobserver.files.wordpress.com/2016/11/screen-shot-2016-09-19-at-10-35-43-am11.png?w=635")
+seventh = Song.create(title:"Electric Relaxation", artist_id: tribe.id)
+for_hero = Artist.create(artist_name: "4Hero", artist_image_path: "https://pbs.twimg.com/profile_images/2936944453/47877ffd5b2b15cdc5775b8fa95d0f87_400x400.jpeg")
+eighth = Song.create(title:"I Am the Black Gold of the Sun (Nuyorican Soul Remix)", artist_id: for_hero.id)
+ninth = Song.create(title:"Waters Of Nazareth", artist_id: justice.id)
+skream = Artist.create(artist_name: "Skream", artist_image_path: "https://djmag.com/sites/default/files/storyimages/SKREAM_4.jpg")
+tenth = Song.create(title:"In For The Kill (La Roux Remix)", artist_id: skream.id)
+Playlist.create(name:"Annie Mac", song_ids:[first.id, second.id, third.id, innercity.id, fifth.id, sixth.id, seventh.id, eighth.id, ninth.id, tenth.id])

@@ -15,8 +15,8 @@
  */
 
 img {
-  width:200px;
   border-radius:20px;
+  height:150px;
 }
 
 body {
@@ -28,12 +28,52 @@ body {
 }
 
 a {
-  color:gray;
+  color:lightgray;
   font-size:1.5em;
 }
 
 .navbar {
   background: none;
   border-bottom: 5px solid white;
-  border_radius:none;
+  border-radius:none;
+}
+
+.dash {
+  min-height:300px;
+}
+
+.list_style {
+  background: lightgray;
+  color:black;
+  width:30%;
+  margin:5px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:5px;
+}
+
+.selected_list {
+  background: blue;
+}
+
+.songs_table {
+  width: 70%;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+th {
+  text-align: center;
+}
+
+.footer {
+  margin-top:100px;
+  background: black;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.text-muted {
+
 }
