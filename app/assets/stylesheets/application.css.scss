@@ -32,6 +32,10 @@ a {
   font-size:1.5em;
 }
 
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .navbar {
   background: none;
   border-bottom: 5px solid white;
@@ -70,10 +74,7 @@ th {
 .footer {
   margin-top:100px;
   background: black;
-  border: 1px solid white;
   padding: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.text-muted {
-
-}
