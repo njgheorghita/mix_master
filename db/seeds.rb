@@ -98,7 +98,7 @@ get_lucky = Song.create(title:"Get Lucky", artist_id: daft.id, youtube: "https:/
 # animals marti garrix second
 # levels third
 shm = Artist.create(artist_name: "Swedish House Mafia", artist_image_path: "http://theneptunes.org/wp-content/uploads/2009/10/Swedish-House-Mafia.jpg")
-fourth = Song.create(title:"One", artist_id: shm.id, youtube: "https://www.youtube.com/watch?v=PkQ5rEJaTmk">)
+fourth = Song.create(title:"One", artist_id: shm.id, youtube: "https://www.youtube.com/watch?v=PkQ5rEJaTmk")
 # music sounds better with you 
 # born_slippy sixth
 praise_you = Song.create(title:"Praise You", artist_id: fatboy.id, youtube: "https://www.youtube.com/watch?v=ruAi4VBoBSM")
