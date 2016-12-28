@@ -51,7 +51,7 @@ seventh = Song.create(title:"Clear", artist_id: cybotron.id, youtube: "https://w
 hardrive = Artist.create(artist_name: "Hardrive", artist_image_path: "http://images.junostatic.com/full/CS2588496-02A-BIG.jpg")
 eighth = Song.create(title:"Deep Inside", artist_id: hardrive.id, youtube: "https://www.youtube.com/watch?v=KRH05Nq_JI0")
 orbital = Artist.create(artist_name: "Orbital", artist_image_path: "http://dt7v1i9vyp3mf.cloudfront.net/styles/news_large/s3/imagelibrary/c/classic4-1206.jpg?UF9R5kHw5DOJlXiwH2k_W_KVEfoi9OIE=&itok=HItmSIQV")
-ninth = Song.create(title:"Chime", artist_id: orbital., youtube: "https://www.youtube.com/watch?v=HXU5Rxc3vBQ")
+ninth = Song.create(title:"Chime", artist_id: orbital.id, youtube: "https://www.youtube.com/watch?v=HXU5Rxc3vBQ")
 rhythim = Artist.create(artist_name: "Rhythim is Rhythim", artist_image_path: "https://lastfm-img2.akamaized.net/i/u/avatar170s/48aeaee3dbfa45b1a7e6abb29407c032.jpg")
 tenth = Song.create(title:"Strings Of Life", artist_id: rhythim.id, youtube: "https://www.youtube.com/watch?v=2GnFvdaEl2Q")
 Playlist.create(name:"LA Weekly", song_ids:[first.id, sounds_better.id, third.id, fourth.id, born_slippy.id, sixth.id, seventh.id, eighth.id, ninth.id, tenth.id])
